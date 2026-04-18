@@ -24,11 +24,10 @@ exe_subdir: "NVict_Etiketten_Maker"
 setup_name: NVict_Etiketten_Maker_Setup.exe
 version_json_name: etiketten_version.json
 
-# FTP
-ftp_subdir: /software/NVict_Etiketten
-# BELANGRIJK: updates dir is GEDEELD met andere apps onder /software/updates/
-# (behoud bestaande update-URL die in de app gehardcodeerd staat)
-ftp_updates_subdir: /software/updates
+# FTP — login zit al in /software/, dus /NVict_Etiketten = web /software/NVict_Etiketten/
+ftp_subdir: /NVict_Etiketten
+# Updates gaan in de GEDEELDE /updates map (naast de app-folders), niet per app
+ftp_updates_subdir: /updates
 
 # Explicite URLs
 download_url: "https://www.nvict.nl/software/NVict_Etiketten/NVict_Etiketten_Maker_Setup.exe"
