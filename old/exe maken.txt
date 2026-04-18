@@ -1,1 +1,0 @@
-pyinstaller "NVict_Etiketten.spec"
