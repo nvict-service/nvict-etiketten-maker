@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(py -c:*)",
+      "Bash(cmd /c \"cd /d \"\"C:\\\\Users\\\\NVict Service\\\\OneDrive - NVict Service\\\\Apps\\\\NVictPython\\\\NVict-Etiketten\"\" && py -c \"\"import ast; ast.parse\\(open\\(''NVict_Etiketten.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''Syntax OK''\\)\"\"\")",
+      "Bash(cmd /c \"py --version\")",
+      "Bash(cmd /c \"python3 --version\")",
+      "Bash(cmd /c \"where python*\")",
+      "Bash(cmd /c \"where /r C:\\\\Users python.exe 2>nul | head -3\")",
+      "Bash(cmd /c \"cd /d \"\"C:\\\\Users\\\\NVict Service\\\\OneDrive - NVict Service\\\\Apps\\\\NVictPython\\\\NVict-Etiketten\"\" && py -m pip install -r requirements.txt 2>&1\")",
+      "Bash(cmd /c \"py -m pip install pandas python-docx Pillow openpyxl 2>&1\")",
+      "Bash(cmd /c \"py --version && py -m pip --version\")"
+    ]
+  }
+}

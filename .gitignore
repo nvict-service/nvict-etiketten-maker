@@ -1,0 +1,42 @@
+# ============================================================
+# NVict Etiketten Maker — .gitignore
+# ============================================================
+
+# Build output
+build/
+dist/
+Output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtuele omgevingen
+.venv/
+venv/
+env/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / credentials — NOOIT committen
+.env
+ftp_config.ini
+
+# Backups / logs / tijdelijk
+*.bak
+*.backup
+*.log
+*.tmp
+
+# Gegenereerd bij build
+version_info.txt
+
+# Inno Setup build-residu
+*.iss.backup

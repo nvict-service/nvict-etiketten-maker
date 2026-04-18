@@ -1,0 +1,19 @@
+# NVict Etiketten Maker - Python Dependencies
+# Installeer met: pip install -r requirements.txt
+
+# Core dependencies
+pandas>=2.0.0
+python-docx>=0.8.11
+Pillow>=10.0.0
+openpyxl>=3.1.0
+
+# PyInstaller voor building
+pyinstaller>=6.0.0
+
+# Optional maar aanbevolen
+wheel>=0.41.0
+setuptools>=68.0.0
+
+# Development tools (optioneel)
+# pylint>=3.0.0
+# black>=23.0.0

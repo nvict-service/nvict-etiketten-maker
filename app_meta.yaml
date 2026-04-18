@@ -1,0 +1,40 @@
+# Metadata voor _nvict_build/release.py.
+# Zie _nvict_build/README.md voor alle beschikbare velden.
+#
+# LET OP: version.py moet in sync blijven met APP_VERSION in NVict_Etiketten.py
+# (beide staan op dezelfde waarde).
+
+app_id: NVictEtikettenMaker
+app_name: "NVict Etiketten Maker"
+app_publisher: "NVict Service"
+app_url: "https://www.nvict.nl/software/NVict_Etiketten/"
+app_copyright: "Copyright 2026 NVict Service"
+
+# Bronbestanden
+spec_file: NVictEtiketten.spec
+installer_script: NVict_Etiketten.iss
+release_notes: release_notes.txt
+icon: favicon.ico
+version_module: version
+
+# Output namen
+# One-folder PyInstaller: dist/<exe_subdir>/<exe_name>
+exe_name: "NVict Etiketten Maker.exe"
+exe_subdir: "NVict_Etiketten_Maker"
+setup_name: NVict_Etiketten_Maker_Setup.exe
+version_json_name: etiketten_version.json
+
+# FTP
+ftp_subdir: /software/NVict_Etiketten
+# BELANGRIJK: updates dir is GEDEELD met andere apps onder /software/updates/
+# (behoud bestaande update-URL die in de app gehardcodeerd staat)
+ftp_updates_subdir: /software/updates
+
+# Explicite URLs
+download_url: "https://www.nvict.nl/software/NVict_Etiketten/NVict_Etiketten_Maker_Setup.exe"
+update_check_url: "https://www.nvict.nl/software/updates/etiketten_version.json"
+
+setup_signed: true
+
+# GitHub (repo wordt aangemaakt als die nog niet bestaat)
+github_repo: nvict-etiketten-maker

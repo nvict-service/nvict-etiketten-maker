@@ -1,0 +1,34 @@
+Versie 4.1.0
+
+WAT IS ER NIEUW
+
+• Automatische updates
+  De app controleert nu automatisch of er een nieuwe versie beschikbaar is
+  en kan deze direct downloaden en installeren
+
+• Modern donker/licht thema
+  De app past zich automatisch aan aan uw Windows thema
+  U kunt ook handmatig wisselen met de knop rechtsboven
+
+• Verbeterde interface
+  Duidelijkere dialogen en mooiere vormgeving voor een betere gebruikservaring
+
+• Sneller en stabieler
+  Verbeterde prestaties en minder kans op crashes
+
+VERBETERINGEN
+
+• Alle vensters verschijnen nu netjes gecentreerd op uw scherm
+• Klikbare bestandsnamen in succesbericht - klik om direct te openen
+• Betere foutmeldingen wanneer iets misgaat
+• Snellere laadtijd bij opstarten
+
+BUG FIXES
+
+• Iconen worden nu altijd correct weergegeven
+• Thema wissel werkt nu soepel zonder haperingen
+• Voorbeeldbestanden worden correct geïnstalleerd
+
+---
+
+Download de nieuwste versie op www.nvict.nl
