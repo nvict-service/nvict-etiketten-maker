@@ -5,8 +5,8 @@ Thin build-wrapper voor NVict Etiketten Maker.
 Delegeert aan ../_nvict_build/release.py. Alle CLI-flags worden doorgegeven.
 
 Voorbeelden:
-    python build.py                  # complete release (build + sign + upload)
-    python build.py --no-upload      # alleen lokaal bouwen
+    python build.py                  # complete release (build + sign + kopie naar nvict-web/software)
+    python build.py --no-website     # alleen lokaal bouwen
     python build.py --no-sign        # zonder code-signing (dev)
     python build.py --only clean,exe # alleen specifieke stappen
 """
