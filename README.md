@@ -39,16 +39,33 @@ Na het inladen zie je direct een schaal 1:1 voorbeeld van het eerste adres op
 het gekozen etiket-formaat, zodat je precies weet hoe het eruit komt te zien
 voordat er één vel papier wordt gebruikt.
 
-### Zes standaardformaten vooraf ingesteld
+### Zeven standaardformaten vooraf ingesteld
 
-| Formaat      | Afmeting         | Etiketten per vel |
-|--------------|------------------|-------------------|
-| Herma 10825  | 99,1 × 33,8 mm   | 16                |
-| Herma 4625   | 66,0 × 33,8 mm   | 24                |
-| Herma 4360   | 70,0 × 36,0 mm   | 24                |
-| Herma 4267   | 99,1 × 42,3 mm   | 12                |
-| Herma 4425   | 105,0 × 148,5 mm | 4                 |
-| Avery L7163  | 99,1 × 38,1 mm   | 14                |
+| Formaat                  | Afmeting         | Etiketten per vel |
+|--------------------------|------------------|-------------------|
+| Herma 10825              | 99,1 × 33,8 mm   | 16                |
+| Herma 4625               | 66,0 × 33,8 mm   | 24                |
+| Herma 4360               | 70,0 × 36,0 mm   | 24                |
+| Herma 4267               | 99,1 × 42,3 mm   | 12                |
+| Herma 4473 / Avery L7166 | 99,1 × 93,1 mm   | 6                 |
+| Herma 4425               | 105,0 × 148,5 mm | 4                 |
+| Avery L7163              | 99,1 × 38,1 mm   | 14                |
+
+De 2-koloms 99,1 mm-vellen hebben een tussenruimte van 2,5 mm tussen de
+kolommen en een linkermarge van 4,65 mm (Herma/Avery-raster); die worden
+exact zo in het Word-document gezet.
+
+### Eigen etiketformaten (sinds 4.3.0)
+
+Staat uw vel er niet bij? Klik op **➕ Eigen formaat…** en neem de maten
+van de verpakking over: breedte en hoogte van één etiket, aantal naast en
+onder elkaar, linker-/bovenmarge (leeg = gecentreerd op het vel) en de
+tussenruimte tussen kolommen en rijen. Een tekening van het vel laat meteen
+zien of alles past. Eigen formaten staan in
+`%APPDATA%\NVict Service\Etiketten Maker\etiketten_instellingen.json`
+(samen met het laatst gekozen formaat) en zijn te bewerken en te verwijderen
+met de knoppen naast de keuzelijst. De vaste formaten zelf zijn niet te
+wijzigen; maak daarvan zo nodig een eigen variant.
 
 ### Twee werkwijzen
 

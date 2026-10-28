@@ -149,7 +149,8 @@ VOLGENDE STAPPEN
 2. Pas aan of maak een nieuw bestand
 3. Sla op in deze map (of waar u wilt)
 4. Start NVict Etiketten Maker
-5. Kies uw etiket formaat
+5. Kies uw etiket formaat (staat uw vel er niet bij? Klik op "Eigen formaat..."
+   en neem de maten van de verpakking over)
 6. Selecteer uw Excel bestand
 7. Preview en aanpassen indien nodig
 8. Maak uw etiketten!
