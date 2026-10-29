@@ -1,4 +1,7 @@
-Versie 4.3.0
+Versie 4.3.1
+
+• 4.3.1: de tekening van het vel bij een eigen formaat heeft nu de juiste
+  verhouding (het rechterpaneel werd door het formulier afgesneden)
 
 WAT IS ER NIEUW
 

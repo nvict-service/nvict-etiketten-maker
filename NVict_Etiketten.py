@@ -4,7 +4,7 @@ NVict Etiketten Maker - Professional Edition
 Ontwikkeld door NVict Service
 
 Website: www.nvict.nl
-Versie: 4.3.0
+Versie: 4.3.1
 """
 
 import sys
@@ -31,7 +31,7 @@ import platform
 from datetime import datetime
 
 # Applicatie versie
-APP_VERSION = "4.3.0"
+APP_VERSION = "4.3.1"
 UPDATE_CHECK_URL = "https://www.nvict.nl/software/updates/etiketten_version.json"
 UPDATE_CHECK_URL_FALLBACK = "https://www.nvict.nl/software/updates/etiketten_version.php"
 
@@ -1128,16 +1128,16 @@ class EigenFormaatWindow:
 
         self.window = tk.Toplevel(parent)
         self.window.title("Eigen etiketformaat" if naam is None else "Etiketformaat bewerken")
-        self.window.geometry("860x640")
-        self.window.minsize(800, 600)
+        self.window.geometry("960x680")
+        self.window.minsize(900, 640)
         self.window.transient(parent)
         self.window.grab_set()
         self.window.configure(bg=theme.bg_primary)
 
         self.window.update_idletasks()
-        x = (self.window.winfo_screenwidth() // 2) - (860 // 2)
-        y = (self.window.winfo_screenheight() // 2) - (640 // 2)
-        self.window.geometry(f"860x640+{x}+{y}")
+        x = (self.window.winfo_screenwidth() // 2) - (960 // 2)
+        y = (self.window.winfo_screenheight() // 2) - (680 // 2)
+        self.window.geometry(f"960x680+{x}+{y}")
 
         try:
             icon_path = get_resource_path("favicon.ico")
@@ -1164,6 +1164,12 @@ class EigenFormaatWindow:
 
         main_container = tk.Frame(self.window, bg=self.theme.bg_primary)
         main_container.pack(fill=tk.BOTH, expand=True, padx=30, pady=20)
+
+        # Rechts: vaste breedte, als eerste gepackt zodat het formulier links
+        # het paneel niet kan indrukken (dan werd de tekening afgesneden).
+        right_card = tk.Frame(main_container, bg=self.theme.card_bg, width=320)
+        right_card.pack(side=tk.RIGHT, fill=tk.Y)
+        right_card.pack_propagate(False)
 
         # Links: invoervelden
         left_card = tk.Frame(main_container, bg=self.theme.card_bg)
@@ -1221,10 +1227,6 @@ class EigenFormaatWindow:
         form.columnconfigure(0, minsize=190)
 
         # Rechts: voorbeeld van het vel
-        right_card = tk.Frame(main_container, bg=self.theme.card_bg, width=300)
-        right_card.pack(side=tk.RIGHT, fill=tk.Y)
-        right_card.pack_propagate(False)
-
         preview_content = tk.Frame(right_card, bg=self.theme.card_bg)
         preview_content.pack(padx=15, pady=15, fill=tk.BOTH, expand=True)
 
@@ -1234,9 +1236,11 @@ class EigenFormaatWindow:
                  fg=self.theme.text_primary,
                  bg=self.theme.card_bg).pack(anchor=tk.W, pady=(0, 8))
 
-        self.canvas = tk.Canvas(preview_content, width=260, height=340,
+        self.canvas = tk.Canvas(preview_content, width=280, height=360,
                                 bg=self.theme.card_bg, highlightthickness=0)
-        self.canvas.pack()
+        self.canvas.pack(fill=tk.BOTH, expand=True)
+        # Opnieuw tekenen zodra het canvas zijn werkelijke maat heeft
+        self.canvas.bind('<Configure>', lambda e: self.update_preview())
 
         self.info_label = tk.Label(preview_content,
                                    text="",
@@ -1308,8 +1312,12 @@ class EigenFormaatWindow:
         specs = maak_formaat_specs(inst, eigen=True)
         pw_mm = specs['page_width'] * 10
         ph_mm = specs['page_height'] * 10
-        cw = int(self.canvas['width'])
-        ch = int(self.canvas['height'])
+        # Werkelijke maat van het canvas (na layout), anders de ingestelde maat
+        cw = self.canvas.winfo_width()
+        ch = self.canvas.winfo_height()
+        if cw < 50 or ch < 50:
+            cw = int(self.canvas['width'])
+            ch = int(self.canvas['height'])
         schaal = min((cw - 10) / pw_mm, (ch - 10) / ph_mm)
         x0 = (cw - pw_mm * schaal) / 2
         y0 = (ch - ph_mm * schaal) / 2
